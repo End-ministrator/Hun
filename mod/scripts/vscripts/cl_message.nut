@@ -30,7 +30,8 @@ ClClient_MessageStruct function OnReceivedSayTextMessage(ClClient_MessageStruct 
         
         if(!(playerName in playerMessageHistory))
         {
-            playerMessageHistory[playerName] <- PlayerMessageData()
+            PlayerMessageData data
+            playerMessageHistory[playerName] <- data
         }
         
         PlayerMessageData playerData = playerMessageHistory[playerName]
