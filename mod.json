@@ -76,6 +76,10 @@
 		{
 			"Path": "command/cl_bot.nut",
 			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_at.nut",
+			"RunOn": "CLIENT && MP"
 		}
 	]
 }

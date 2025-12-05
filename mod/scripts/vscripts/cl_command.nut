@@ -10,4 +10,5 @@ void function HunCommand_Init()
     ClientChatCommand_Dist_Init()
     ClientChatCommand_Orig_Init()
     ChatCommand_Bot_Init()
+    ChatCommand_At_Init()
 }
