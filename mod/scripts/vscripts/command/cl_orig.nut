@@ -7,14 +7,20 @@ void function ClientChatCommand_Orig_Init()
 
 void function ClientChatCommand_Orig(entity player, array<string> args)
 {
-    array<entity> players = []
-    
-    if( args.len() == 0 || args[0].tolower() == "all")
-        players = GetPlayerArray()
-    else if(args.len() == 1)
-        players = GetPlayersByNamePrefix(args[0])
-    else
+    if( args.len() != 1 ){
+        Hun_Say( "Usage: @orig [all|name]" )
         return
+    }
+    
+    array<entity> players = []
+    switch( args[0].tolower() ){
+        case "all":
+            players = GetPlayerArray()
+            break
+        default:
+            players = GetPlayersByNamePrefix(args[0])
+            break
+    }
     
     array<string> messages = []
     foreach(player in players)

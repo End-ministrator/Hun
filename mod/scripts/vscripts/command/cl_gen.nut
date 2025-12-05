@@ -8,17 +8,19 @@ void function ClientChatCommand_Gen_Init()
 void function ClientChatCommand_Gen(entity player, array<string> args)
 {
     if(args.len() != 1){
-        Hun_Say( "@gen <name/all>" )
+        Hun_Say( "Usage: @gen [name/all]" )
         return
     }
 
-    string arg0Lower = args[0].tolower()
     array<entity> players = []
-    
-    if( arg0Lower == "all")
-        players = GetPlayerArray()
-    else
-        players = GetPlayersByNamePrefix(arg0Lower)
+    switch( args[0].tolower() ){
+        case "all":
+            players = GetPlayerArray()
+            break
+        default:
+            players = GetPlayersByNamePrefix(args[0])
+            break
+    }
     
     array<string> messages = []
     foreach(player in players)

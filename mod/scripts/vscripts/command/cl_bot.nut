@@ -8,7 +8,7 @@ void function ChatCommand_Bot_Init()
 void function OnChatCommand(entity player, array<string> args)
 {
     if(args.len() != 0){
-        Hun_Say( "@bot" )
+        Hun_Say( "Usage: @bot" )
         return
     }
     
