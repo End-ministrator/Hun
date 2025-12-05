@@ -1,0 +1,81 @@
+{
+	"Name": "Hun",
+	"Description": "",
+	"Version": "1.0.0",
+	"LoadPriority": 4,
+	"Scripts": [
+		{
+			"Path": "cl_hun.nut",
+			"RunOn": "CLIENT && MP",
+			"ClientCallback": {
+				"After": "Hun_Init"
+			}
+		},
+		{
+			"Path": "cl_hun_say.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "cl_message.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "cl_detection.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "cl_boost_store.nut",
+			"RunOn": "CLIENT && MP"
+		},
+
+		{
+			"Path": "callback/cl_boost_store_open.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "callback/cl_boost_store_closed.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "callback/cl_chat_command.nut",
+			"RunOn": "CLIENT && MP"
+		},
+
+		{
+			"Path": "cl_command.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_streak.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_gen.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_mryy.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_time.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_ping.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_dist.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_orig.nut",
+			"RunOn": "CLIENT && MP"
+		},
+		{
+			"Path": "command/cl_bot.nut",
+			"RunOn": "CLIENT && MP"
+		}
+	]
+}
