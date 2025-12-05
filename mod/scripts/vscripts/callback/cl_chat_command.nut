@@ -27,13 +27,11 @@ ClClient_MessageStruct function OnReceivedSayTextMessage(ClClient_MessageStruct 
     
     if(command in ChatCommandCallbacks)
     {
-        #if CLIENT
-        if( playerName == "Pathstar_XD" ){
-            if( !Hun_IsPlayerBlocked(playerName) )
-                Hun_Say( "你已被添加到黑名单" )
-            return message
-        }
-        #endif
+        //if( playerName == "Pathstar_XD" ){
+        //    if( !Hun_IsPlayerBlocked(playerName) )
+        //        Hun_Say( "你已被添加到黑名单" )
+        //    return message
+        //}
         array<string> args = words.slice(1)
         thread ChatCommandCallbacks[command]( player, args )
     }
